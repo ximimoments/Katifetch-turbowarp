@@ -11,11 +11,6 @@ class KatifetchExtension {
       color2: '#4a2475',
       blocks: [
         {
-          opcode: 'printKatifetch',
-          blockType: Scratch.BlockType.COMMAND,
-          text: 'print Katifetch info'
-        },
-        {
           opcode: 'getKatifetchFull',
           blockType: Scratch.BlockType.REPORTER,
           text: 'full Katifetch'
@@ -94,13 +89,6 @@ class KatifetchExtension {
       language: navigator.language || "en",
       online: navigator.onLine ? "Online" : "Offline"
     };
-  }
-
-  printKatifetch(args, util) {
-    const output = this.getKatifetchFull();
-    if (util && util.target) {
-      util.target.setSay('say', output);
-    }
   }
 
   getKatifetchFull() {
